@@ -15,11 +15,12 @@ contacts = {"Analyn Cajocson" => (), "Avion School" => ()}
 contacts.each_with_index do |(key,value),idx| 
     temp = Hash.new 
     contact_data[idx].each_with_index do |value,idx|
-        if idx===0
+        case idx
+        when 0
             temp[:email]=value
-        elsif idx===1
+        when 1
             temp[:address]=value
-        elsif idx===2
+        when 2
             temp[:phone]=value
         end
     end
